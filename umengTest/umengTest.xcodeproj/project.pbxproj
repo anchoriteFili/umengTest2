@@ -34,6 +34,7 @@
 		C232A7321B5BA44F00220EE9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C232A7311B5BA44F00220EE9 /* CoreTelephony.framework */; };
 		C232A7341B5BA45A00220EE9 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C232A7331B5BA45900220EE9 /* libstdc++.dylib */; };
 		C232A7361B5BA46900220EE9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C232A7351B5BA46900220EE9 /* libz.dylib */; };
+		C232A73A1B5BBAE900220EE9 /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C232A7381B5BBAE900220EE9 /* libSocialSina.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		C232A7311B5BA44F00220EE9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		C232A7331B5BA45900220EE9 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		C232A7351B5BA46900220EE9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C232A7381B5BBAE900220EE9 /* libSocialSina.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialSina.a; sourceTree = "<group>"; };
+		C232A7391B5BBAE900220EE9 /* UMSocialSinaHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSinaHandler.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 				C232A7301B5BA44500220EE9 /* libsqlite3.dylib in Frameworks */,
 				C232A72E1B5BA43B00220EE9 /* CoreGraphics.framework in Frameworks */,
 				C232A72A1B5BA42300220EE9 /* libiconv.dylib in Frameworks */,
+				C232A73A1B5BBAE900220EE9 /* libSocialSina.a in Frameworks */,
 				C232A7281B5BA41600220EE9 /* Security.framework in Frameworks */,
 				C232A71C1B5BA30400220EE9 /* libUMSocial_Sdk_4.2.3.a in Frameworks */,
 				C232A71D1B5BA30400220EE9 /* libUMSocial_Sdk_Comment_4.2.3.a in Frameworks */,
@@ -151,6 +155,7 @@
 		C232A6D81B5BA0F700220EE9 /* umengTest */ = {
 			isa = PBXGroup;
 			children = (
+				C232A7371B5BBAE800220EE9 /* Sina */,
 				C232A6FF1B5BA30400220EE9 /* UMSocial_Sdk_4.2.3 */,
 				C232A6DD1B5BA0F700220EE9 /* AppDelegate.h */,
 				C232A6DE1B5BA0F700220EE9 /* AppDelegate.m */,
@@ -234,6 +239,15 @@
 				C232A7181B5BA30400220EE9 /* UMSShareListController.xib */,
 			);
 			path = SocialSDKXib;
+			sourceTree = "<group>";
+		};
+		C232A7371B5BBAE800220EE9 /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				C232A7381B5BBAE900220EE9 /* libSocialSina.a */,
+				C232A7391B5BBAE900220EE9 /* UMSocialSinaHandler.h */,
+			);
+			path = Sina;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,6 +499,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/umengTest/UMSocial_Sdk_4.2.3",
+					"$(PROJECT_DIR)/umengTest/Sina",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -499,6 +514,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/umengTest/UMSocial_Sdk_4.2.3",
+					"$(PROJECT_DIR)/umengTest/Sina",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
