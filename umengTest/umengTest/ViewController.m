@@ -24,4 +24,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"55ab676067e58e84040088e1"
+                                      shareText:@"你要分享的文字"
+                                     shareImage:[UIImage imageNamed:@"icon.png"]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToQQ,UMShareToQzone,UMShareToFacebook,nil]
+                                       delegate:self];
+
+}
+
 @end
