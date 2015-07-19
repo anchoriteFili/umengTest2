@@ -24,6 +24,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#warning 进行代码实现
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [UMSocialSnsService presentSnsIconSheetView:self
                                          appKey:@"55ab676067e58e84040088e1"
