@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "UMSocial.h"
+#import "UMSocialSinaHandler.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-#warning 第一步:设置友盟appKey
+#warning 1.设置友盟appKey
     [UMSocialData setAppKey:@"55ab676067e58e84040088e1"];
+    
+#warning 3.添加SSO授权开关
+//打开新浪微博的SSO开关，设置新浪微博回调地址，这里必须要和你在新浪微博后台设置的回调地址一致。若在新浪后台设置我们的回调地址，“http://sns.whalecloud.com/sina2/callback”，这里可以传nil
+    [UMSocialSinaHandler openSSOWithRedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
     
     return YES;
 }
